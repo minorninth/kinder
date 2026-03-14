@@ -1,0 +1,366 @@
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: #f7f8fb;
+  color: #1f2937;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+.page {
+  width: min(760px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+/* Title */
+h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+/* General text rhythm */
+p,
+ul {
+  margin: 0 0 1rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.4rem;
+}
+
+strong,
+b {
+  color: #111827;
+}
+
+/* Info section spacing */
+.info {
+  margin-bottom: 24px;
+}
+
+#highscore {
+  margin: 0 0 16px;
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  padding: 1em;
+  font-weight: bold;
+  background-color: #ffe;
+}
+
+/* Details cards */
+details {
+  margin: 0 0 16px;
+  background: #ffffff;
+  border: 1px solid #d8dee9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Summary styled like a clean card header */
+summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 18px;
+  font-weight: 650;
+  font-size: 1rem;
+  color: #111827;
+  user-select: none;
+}
+
+/* Hide native disclosure marker */
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom disclosure triangle */
+summary::before {
+  content: "▸";
+  flex: 0 0 auto;
+  transition: transform 120ms ease;
+  transform-origin: center;
+  color: #4b5563;
+  font-size: 200%;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+details ul {
+    margin-left: 2em;
+}
+
+/* Optional hover/focus feel */
+summary:hover, summary:focus-visible {
+  background: #def;
+  outline: none;
+}
+
+/* Padding for the content inside details */
+details > :not(summary) {
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+details > :last-child {
+  padding-bottom: 18px;
+  margin-bottom: 0;
+}
+
+/* Add a little space between header and content when open */
+details[open] summary {
+  border-bottom: 1px solid #eef2f7;
+}
+
+details[open] > :not(summary):first-of-type {
+  padding-top: 14px;
+}
+
+details p:first-of-type,
+details ul:first-of-type {
+  margin-top: 0;
+}
+
+/* Main menu buttons */
+.menu {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+nav button {
+  display: block;
+  width: 100%;
+  min-height: 58px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  background: linear-gradient(180deg, #5599ff, #1144dd);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.10),
+    0 8px 20px rgba(37, 99, 235, 0.18);
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    opacity 120ms ease,
+    background 120ms ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+.menu button:focus-visible, .menu button:hover:not(:disabled) {
+  background: linear-gradient(180deg, #77bbff, #3366dd);
+  outline: 5px solid #93c5fd;
+}
+
+.menu button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  background: linear-gradient(180deg, #94a3b8, #64748b);
+  box-shadow: none;
+}
+
+/* In-game controls: leave your custom styling alone */
+.in-game-controls button {
+  font: inherit;
+}
+
+/* Larger screens */
+@media (min-width: 640px) {
+  .page {
+    width: min(760px, calc(100% - 48px));
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+
+  h1 {
+    margin-bottom: 28px;
+  }
+
+  summary {
+    padding: 15px 20px;
+  }
+
+  details > :not(summary) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  details > :last-child {
+    padding-bottom: 20px;
+  }
+
+  .menu {
+    gap: 14px;
+  }
+
+  .menu button {
+    min-height: 60px;
+    font-size: 1.1rem;
+  }
+}
+
+button {
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    font-size: 200%;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
+}
+
+:disabled {
+    color: #ccc;
+}
+
+#walk {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 50dvh;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #efe;
+}
+
+#walk:focus-visible, #walk:hover {
+    background-color: #cfc;
+}
+
+#turn {
+    position: fixed;
+    left: 0px;
+    top: 50dvh;
+    right: 0px;
+    height: 40dvh;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #fee;
+}
+
+#turn:focus-visible, #turn:hover {
+    background-color: #fcc;
+}
+
+#quitGame {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    height: 10dvh;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: #eef;
+}
+
+#quitGame:focus-visible, #quitGame:hover {
+    background-color: #ccf;
+}
+
+
+.debug #walk, .debug #turn {
+    position: static;
+    width: 300px;
+    height: 100px;
+    margin: 1em;
+}
+
+.debug button {
+    font-size: 140%;
+}
+
+.left {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 50dvw;
+    height: 100dvh;
+    padding: 1em;
+    margin: 0;
+    border: 0;
+}
+
+.right {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 50dvw;
+    height: 100dvh;
+    padding: 1em;
+    margin: 0;
+    border: 0;
+}
+
+.debug .box {
+    border: 1px solid #000;
+    padding: 1em;
+    margin: 1em;
+}
+
+.debug #spatial {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 1em;
+    overflow: hidden;
+}
+
+.debug .icon {
+    position: absolute;
+    left: 250px;
+    top: 250px;
+    font-size: 200%;
+}
+
+.debug .icon#roomIcon {
+    top: -100px;
+}
+
+#live {
+    display: block;
+    overflow: hidden;
+    width: 2px;
+    height: 2px;
+}

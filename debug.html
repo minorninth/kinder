@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Kindergarten Escape Debug
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sound.js"></script>
+    <script src="engine.js"></script>
+    <script src="game.js"></script>
+  </head>
+  <body class="debug">
+    <main class="left">
+      <section hidden id="title">
+        <h1>Kindergarten Escape</h1>
+      </section>
+      <section hidden id="highscore">
+        High score: 46.1 seconds
+      </section>
+      <section id="info" class="info">
+        <details id="instructionsDetails" open>
+          <summary>Instructions</summary>
+          <p>
+            This is an audio game. Headphones are strongly recommended,
+            but good stereo speakers could work too.
+          </p>
+          <p>
+            In this game, the kindergarten kids are dismissed from school first.
+            The kindergartener is about to leave when she realizes
+            she forgot her teddy bear. She runs back to get it, hearing
+            the sounds of different objects and classrooms along the way.
+          </p>
+          <p>
+            After she finds her bear, the lights turn out and she has to
+            find her way back out. As she passes each classroom, sometimes
+            something will be wrong - an anomaly.
+          </p>
+          <ul>
+            <li>Rule 1: If she hears an anomaly, she must turn around before reaching the
+              classroom door.
+            <li>Rule 2: If there is no anomaly, she must keep walking.
+          </ul>
+          <p>
+            If she makes the wrong decision, she ends up back at the kindergarten class
+            again.
+          </p>
+        </details>
+        <details id="controlsDetails" open>
+          <summary>Controls</summary>
+          <p>
+            <b>Keyboard:</b> Hold Up Arrow to walk, tap Down Arrow once to turn around.
+          </p>
+          <p>
+            <b>Touch screen:</b> Once the game begins, the top half of the screen will be
+            the Walk button and the bottom half will be Turn Around. If you're using a
+            screen reader, double-tap and hold the Walk button in order to keep walking.
+            You don't have to hold the Turn Around button.
+          </p>
+        </details>
+        <details id="tipsDetails">
+          <summary>Tips</summary>
+          <ul>
+            <li>The game doesn't progress if you stop moving. Take your time
+              approaching each door until you get better at the game.
+            <li>The order of the classrooms is always the same.
+            <li>An anomaly might introduce an extra sound, or it might replace the
+              sound of a classroom with a different one.
+            <li>Rarely, the anomaly might be that the classroom door is on the
+              wrong side.
+          </ul>
+        </details>
+      </section>
+      <div hidden id="loading">
+	The audio for the game is loading, please wait...
+      </div>
+      <nav hidden id="introsection">
+	<h2>
+	  Listen...
+	</h2>
+        <button id="skip">Skip to Game</button>	
+        <button id="exitIntro">Exit</button>
+      </nav>
+      <nav hidden id="finished">
+	<h2>Congratulations!</h2>
+	<p id="finishedScore"></p>
+        <button id="backToMain">Back to Main Menu</button>
+      </nav>
+      <nav hidden id="menu">
+	<div class="menu">
+          <button id="intro">Play From Beginning</button>
+          <button id="play">Play Game</button>
+	</div>
+      </nav>
+      <div hidden id="gamecontrols" class="in-game-controls">
+        <button id="walk">Walk</button>
+        <button id="turn">Turn Around</button>
+        <button id="quitGame">Give Up</button>
+      </div>
+      <div id="live" aria-live="polite"></div>
+    </main>
+    <div class="right">
+      <div class="box">
+	Position: <span id="position"></span>
+      </div>
+      <div class="box">
+	Room: <span id="room"></span>
+      </div>
+      <div id="spatial">
+        <div class="icon" id="playerIcon">👧🏻</div>
+        <div class="icon" id="roomIcon">🚪</div>
+      </div>
+    </div>
+  </body>
+</html>
