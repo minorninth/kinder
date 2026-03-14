@@ -163,7 +163,7 @@ function setGameMode(newGameMode) {
 
     gameMode = newGameMode;
     titleSection.hidden = (gameMode != MAINMENU && gameMode != LOADING);
-    highscoreSection.hidden = (gameMode != MAINMENU && gameMode != LOADING);
+    highscoreSection.hidden = (gameMode != MAINMENU && gameMode != LOADING) || !localStorage['highScore'];
     gameControlsSection.hidden = (gameMode != PLAYING);
     loading.hidden = (gameMode != LOADING);
     infoSection.hidden = (gameMode != MAINMENU && gameMode != LOADING);
