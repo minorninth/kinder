@@ -564,91 +564,91 @@ window.onload = () => {
     setGameMode(LOADING);
 
     engine = new AudioEngine({
-        impulseUrl: '/sounds/reverb.mp3'
+        impulseUrl: 'sounds/reverb.mp3'
     });
     readyFunctions = [engine.ready];
     allSounds = [];
-    music = new Sound(engine, '/sounds/music.mp3');
-    steps = new Sound(engine, '/sounds/steps.mp3');
-    panting = new Sound(engine, '/sounds/panting.mp3');
-    school = new Sound(engine, '/sounds/school.mp3');
-    narrate1 = new Sound(engine, '/sounds/narrate-1-ohno.mp3');
-    narrate2 = new Sound(engine, '/sounds/narrate-2-getteddy.mp3');
+    music = new Sound(engine, 'sounds/music.mp3');
+    steps = new Sound(engine, 'sounds/steps.mp3');
+    panting = new Sound(engine, 'sounds/panting.mp3');
+    school = new Sound(engine, 'sounds/school.mp3');
+    narrate1 = new Sound(engine, 'sounds/narrate-1-ohno.mp3');
+    narrate2 = new Sound(engine, 'sounds/narrate-2-getteddy.mp3');
 
-    fishtank = new Sound(engine, '/sounds/fishtank.mp3');
-    narrateFishtank = new Sound(engine, '/sounds/narrate-fishtank.mp3');
+    fishtank = new Sound(engine, 'sounds/fishtank.mp3');
+    narrateFishtank = new Sound(engine, 'sounds/narrate-fishtank.mp3');
 
-    gym = new Sound(engine, '/sounds/gym2.mp3');
-    narrateGym = new Sound(engine, '/sounds/narrate-gym.mp3');
+    gym = new Sound(engine, 'sounds/gym2.mp3');
+    narrateGym = new Sound(engine, 'sounds/narrate-gym.mp3');
 
-    cafeteria = new Sound(engine, '/sounds/cafeteria.mp3');
-    narrateCafeteria = new Sound(engine, '/sounds/narrate-cafeteria.mp3');
+    cafeteria = new Sound(engine, 'sounds/cafeteria.mp3');
+    narrateCafeteria = new Sound(engine, 'sounds/narrate-cafeteria.mp3');
 
-    band = new Sound(engine, '/sounds/band.mp3');
-    narrateBand = new Sound(engine, '/sounds/narrate-band.mp3');
+    band = new Sound(engine, 'sounds/band.mp3');
+    narrateBand = new Sound(engine, 'sounds/narrate-band.mp3');
 
-    choir = new Sound(engine, '/sounds/choir.mp3');
-    narrateChoir = new Sound(engine, '/sounds/narrate-choir.mp3');
+    choir = new Sound(engine, 'sounds/choir.mp3');
+    narrateChoir = new Sound(engine, 'sounds/narrate-choir.mp3');
 
-    kitchen = new Sound(engine, '/sounds/kitchen.mp3');
-    narrateKitchen = new Sound(engine, '/sounds/narrate-kitchen.mp3');
+    kitchen = new Sound(engine, 'sounds/kitchen.mp3');
+    narrateKitchen = new Sound(engine, 'sounds/narrate-kitchen.mp3');
 
-    bathroom = new Sound(engine, '/sounds/bathroom.mp3');
-    narrateBathroom = new Sound(engine, '/sounds/narrate-bathroom.mp3');
+    bathroom = new Sound(engine, 'sounds/bathroom.mp3');
+    narrateBathroom = new Sound(engine, 'sounds/narrate-bathroom.mp3');
 
-    robotics = new Sound(engine, '/sounds/robotics.mp3');
-    narrateRobotics = new Sound(engine, '/sounds/narrate-robotics.mp3');
+    robotics = new Sound(engine, 'sounds/robotics.mp3');
+    narrateRobotics = new Sound(engine, 'sounds/narrate-robotics.mp3');
 
-    opendoor = new Sound(engine, '/sounds/opendoor.mp3');
-    narrate3 = new Sound(engine, '/sounds/narrate-3-teddy-foundyou.mp3');
-    powercut = new Sound(engine, '/sounds/powercut.mp3');
-    narrate4 = new Sound(engine, '/sounds/narrate-4-who-turned.mp3');
+    opendoor = new Sound(engine, 'sounds/opendoor.mp3');
+    narrate3 = new Sound(engine, 'sounds/narrate-3-teddy-foundyou.mp3');
+    powercut = new Sound(engine, 'sounds/powercut.mp3');
+    narrate4 = new Sound(engine, 'sounds/narrate-4-who-turned.mp3');
 
     anomalies = [];
-    anomalies.push(new Sound(engine, '/sounds/anomaly1.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly2.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly3.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly4.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly5.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly6.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly7.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly8.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly9.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly10.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly11.mp3'));
-    anomalies.push(new Sound(engine, '/sounds/anomaly12.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly1.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly2.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly3.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly4.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly5.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly6.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly7.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly8.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly9.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly10.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly11.mp3'));
+    anomalies.push(new Sound(engine, 'sounds/anomaly12.mp3'));
 
-    fail = new Sound(engine, '/sounds/fail.mp3');
+    fail = new Sound(engine, 'sounds/fail.mp3');
 
     narrateFail = [];
-    narrateFail.push(new Sound(engine, '/sounds/narrate-lost.mp3'));
-    narrateFail.push(new Sound(engine, '/sounds/narrate-lost-2.mp3'));
-    narrateFail.push(new Sound(engine, '/sounds/narrate-lost-3.mp3'));
+    narrateFail.push(new Sound(engine, 'sounds/narrate-lost.mp3'));
+    narrateFail.push(new Sound(engine, 'sounds/narrate-lost-2.mp3'));
+    narrateFail.push(new Sound(engine, 'sounds/narrate-lost-3.mp3'));
     narrateFailIndex = Math.floor(Math.random() * 3);
 
     narrateCorrect = [];
-    narrateCorrect.push(new Sound(engine, '/sounds/narrate-correct.mp3'));
-    narrateCorrect.push(new Sound(engine, '/sounds/narrate-correct-2.mp3'));
-    narrateCorrect.push(new Sound(engine, '/sounds/narrate-correct-3.mp3'));
-    narrateCorrect.push(new Sound(engine, '/sounds/narrate-correct-4.mp3'));
+    narrateCorrect.push(new Sound(engine, 'sounds/narrate-correct.mp3'));
+    narrateCorrect.push(new Sound(engine, 'sounds/narrate-correct-2.mp3'));
+    narrateCorrect.push(new Sound(engine, 'sounds/narrate-correct-3.mp3'));
+    narrateCorrect.push(new Sound(engine, 'sounds/narrate-correct-4.mp3'));
     narrateCorrectIndex = Math.floor(Math.random() * 4);
 
     narrateTurnaround = [];
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround.mp3'));
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround-2.mp3'));
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround-3.mp3'));
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround-4.mp3'));
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround-5.mp3'));
-    narrateTurnaround.push(new Sound(engine, '/sounds/narrate-turnaround-6.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround-2.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround-3.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround-4.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround-5.mp3'));
+    narrateTurnaround.push(new Sound(engine, 'sounds/narrate-turnaround-6.mp3'));
     narrateTurnaroundIndex = Math.floor(Math.random() * 6);
 
     narrateWin = [];
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win.mp3'));
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win-2.mp3'));
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win-3.mp3'));
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win-4.mp3'));
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win-5.mp3'));
-    narrateWin.push(new Sound(engine, '/sounds/narrate-win-6.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win-2.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win-3.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win-4.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win-5.mp3'));
+    narrateWin.push(new Sound(engine, 'sounds/narrate-win-6.mp3'));
     narrateWinIndex = Math.floor(Math.random() * 6);
 
     // Wait until all sounds load before finishing initialization.
